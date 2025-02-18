@@ -1,13 +1,13 @@
 public class ToppingFactory {
-    public static YogurtTopping getTopping(String type){
-        switch (type.toLowerCase()){
-            case "sprinkles":
+    public static YogurtTopping getTopping(int type){
+        switch (type){
+            case 1:
                 return new Sprinkles();
-            case "mixed chopped nuts":
+            case 2:
                 return new MixedChoppedNuts();
-            case "crushed gingerbread":
+            case 3:
                 return new CrushedGingerbread();
-            case "fresh strawberries":
+            case 4:
                 return new FreshStrawberries();
             default:
                 throw new IllegalArgumentException("Sorry,This topping doesn't exist.");

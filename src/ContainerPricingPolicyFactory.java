@@ -1,15 +1,15 @@
 public class ContainerPricingPolicyFactory {
-    public static ContainerPricingPolicy getContainerPrice(String containerType){
-        switch (containerType.toLowerCase()){
+    public static ContainerPricingPolicy getContainerPrice(int containerType){
+        switch (containerType){
 
-            case "glass jar":
+            case 1:
                 return new GlassJarPricing();
 
-            case "paper cup":
+            case 2:
                 return new PaperCupPricing();
 
             default:
-                return null;
+                throw new IllegalArgumentException("Invalid container type.");
         }
     }
 }
